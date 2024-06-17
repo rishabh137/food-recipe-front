@@ -31,7 +31,7 @@ const Signup = () => {
         setError("")
         e.preventDefault();
         try {
-            const { data } = await axios.post('https://recipeverse.onrender.com/api/users/register', {
+            const { data } = await axios.post('https://recipe-verse.onrender.com/api/users/register', {
                 username,
                 email,
                 password,

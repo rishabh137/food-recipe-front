@@ -30,7 +30,7 @@ const Login = () => {
         setError("")
         e.preventDefault();
         try {
-            const { data } = await axios.post('https://recipeverse.onrender.com/api/users/login', {
+            const { data } = await axios.post('https://recipe-verse.onrender.com/api/users/login', {
                 email,
                 password,
             });
