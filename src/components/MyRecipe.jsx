@@ -21,7 +21,7 @@ const MyRecipe = () => {
                     },
                 };
 
-                const { data } = await axios.get('https://recipe-verse.onrender.com/api/recipes/myrecipes', config);
+                const { data } = await axios.get('https://recipeverse.onrender.com/api/recipes/myrecipes', config);
                 setRecipes(data);
             } catch (error) {
                 console.error(error);
@@ -38,7 +38,7 @@ const MyRecipe = () => {
             return
         }
 
-        const response = await fetch(`https://recipe-verse.onrender.com/api/recipes/${id}`, {
+        const response = await fetch(`https://recipeverse.onrender.com/api/recipes/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -61,7 +61,7 @@ const MyRecipe = () => {
                     <>
                         {recipes.map((recipe) => (
                             <Box>
-                                <img src={`https://recipe-verse.onrender.com/${recipe.image}`} alt={recipe.name} />
+                                <img src={`https://recipeverse.onrender.com/${recipe.image}`} alt={recipe.name} />
                                 <Box>
                                     <h1>{recipe.name}</h1>
                                     <h2>Ingredients: </h2>

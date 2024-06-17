@@ -8,7 +8,7 @@ const RecipeContent = () => {
 
     useEffect(() => {
         const fetchRecipes = async () => {
-            const { data } = await axios.get('https://recipe-verse.onrender.com/api/recipes');
+            const { data } = await axios.get('https://recipeverse.onrender.com/api/recipes');
             setRecipes(data);
         };
         fetchRecipes();
@@ -18,7 +18,7 @@ const RecipeContent = () => {
         <>
             {recipes.map((recipe) => (
                 <Box>
-                    <img src={`https://recipe-verse.onrender.com/${recipe.image}`} alt={recipe.name} />
+                    <img src={`https://recipeverse.onrender.com/${recipe.image}`} alt={recipe.name} />
                     <Box>
                         <h1>{recipe.name}</h1>
                         <h2>Ingredients: </h2>

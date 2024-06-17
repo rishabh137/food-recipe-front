@@ -107,7 +107,7 @@ const Header = ({ toggleDrawer }) => {
             setRecipes([]);
             return;
         }
-        const response = await fetch(`https://recipe-verse.onrender.com/api/recipes/search?q=${query}`);
+        const response = await fetch(`https://recipeverse.onrender.com/api/recipes/search?q=${query}`);
         const data = await response.json();
         setRecipes(data);
     };
@@ -144,7 +144,7 @@ const Header = ({ toggleDrawer }) => {
                     <InputBase placeholder="Search recipe" value={query} onChange={(e) => setQuery(e.target.value)} style={{ color: "#111" }} />
                     {recipes.map((recipe) => (
                         <div key={recipe._id} style={{ color: "#111" }}>
-                            <img src={`https://recipe-verse.onrender.com/${recipe.image}`} alt="" style={{ width: "100px", marginRight: "20px" }} />
+                            <img src={`https://recipeverse.onrender.com/${recipe.image}`} alt="" style={{ width: "100px", marginRight: "20px" }} />
                             <Box>
                                 <h2>{recipe.name}</h2>
                                 <p>{recipe.description.slice(0, 100)}...</p>

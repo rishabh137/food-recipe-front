@@ -46,7 +46,7 @@ const RecipeOverview = () => {
 
     useEffect(() => {
         const fetchRecipe = async () => {
-            const { data } = await axios.get(`https://recipe-verse.onrender.com/api/recipes/${id}`);
+            const { data } = await axios.get(`https://recipeverse.onrender.com/api/recipes/${id}`);
             setRecipe(data);
         };
         fetchRecipe();
@@ -55,7 +55,7 @@ const RecipeOverview = () => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const { data } = await axios.get(`https://recipe-verse.onrender.com/api/users/${val}`);
+                const { data } = await axios.get(`https://recipeverse.onrender.com/api/users/${val}`);
                 console.log(data);
                 setUser(data);
             } catch (error) {
@@ -70,7 +70,7 @@ const RecipeOverview = () => {
             <RecipeOverviewContainer style={openDrawer ? { marginLeft: 280 } : { marginLeft: 0 }}>
                 <h1 className="username">Posted by:<span style={{ color: "#eb6b16" }}> {user.username}</span></h1>
                 <Box>
-                    <img src={`https://recipe-verse.onrender.com/${recipe.image}`} alt={recipe.name} />
+                    <img src={`https://recipeverse.onrender.com/${recipe.image}`} alt={recipe.name} />
                     <Box>
                         <h1 className="recipe-heading food-item">{recipe.name}</h1>
                         <Box>

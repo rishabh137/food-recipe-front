@@ -71,7 +71,7 @@ const AddRecipe = () => {
         formData.append('ingredients', ingredients);
         formData.append('image', image);
         formData.append('steps', steps);
-        const response = await fetch('https://recipe-verse.onrender.com/api/recipes', {
+        const response = await fetch('https://recipeverse.onrender.com/api/recipes', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
